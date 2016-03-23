@@ -1,0 +1,8 @@
+<h1>Article List</h1>
+
+<ul style="list-style-type: none">
+  <% @articles.each do |article| %>
+    <li style="text-decoration: underline; font-weight: bold"><%= article["title"] %></li>
+    <li><a target="_blank" style="text-decoration: none;" href="<%= article["url"] %>"><%= article["url"] %></a><%= " : " + article["description"] %></li>
+  <% end %>
+</ul>
